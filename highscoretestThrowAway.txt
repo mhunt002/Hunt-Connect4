@@ -1,0 +1,10 @@
+3 Player1-Player2
+3 Player2-Player1
+5 Player1-Player2
+5 Player2-Player1
+5 dog-caa
+5 dog-cab
+5 dog-cac
+5 dog-cad
+5 dog-cae
+5 dog-caf

@@ -1,0 +1,90 @@
+=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+CIS 120 Game Project Proposal
+PennKey: _______
+=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+
+===============
+=: Your Game :=
+===============
+
+- What game are you planning to implement? If it is a game of your own design,
+  or not especially well-known, provide a 2-3 sentence description of the game.
+
+	I will be implementing Connect 4!
+
+
+- What classes and interfaces do you plan to create? How will the different
+  components of your game (the model, the GUI, etc.) interact?
+
+	I will create 3 classes. First a Game class which will handle the frame and widgets of the GUI. This class will implement runnable and will start the game. The next class will be GameBoard which will contain the game’s state including the board state, who’s turn it is, player names, determining if a move is valid, and finding if there is winner. The last class will be HighScore which will handle the file I/O of saving highscores and reading them when the game is launched. 
+
+
+- What do you think will be the most challenging thing to implement?
+	
+	I think the most challenging thing to implement will be detecting whether a player has won.
+
+
+====================
+=: Core Concept 1 :=
+====================
+
+Concept 1: 2D Array
+
+- What specific feature of your game will be implemented using this concept?
+	The state of the board will be implemented using this feature, i.e. which spaces of the board are empty, or belong to one of the players.
+
+
+- Why does it make sense to implement this feature with this concept? Justify
+  why this is a non-trivial application of the concept in question.
+	It makes sense to use a 2D array because the game board is basically a set of cells each containing a piece of data. A 2D array makes the most sense because it will be useful to check the cells around a specific cell when looking for a winner.
+
+	This will be non trivial because I will have to determine if a player can put their coin in a certain column and make sure the coin goes to the lowest empty cell in order to correctly implement the game.
+
+
+====================
+=: Core Concept 2 :=
+====================
+
+Concept 2: Complex search of the game state
+- What specific feature of your game will be implemented using this concept?
+	I will use this to determine if the current board contains a winner.
+
+
+- Why does it make sense to implement this feature with this concept? Justify
+  why this is a non-trivial application of the concept in question.
+	This makes sense because the program must be able to find any 4 adjacent coins either horizontally, vertically or diagonally to determine if a player has won. I think the most complex part of this search will be detecting diagonal wins.
+	
+
+
+====================
+=: Core Concept 3 :=
+====================
+
+Concept 3: JUnit Testing
+
+- What specific feature of your game will be implemented using this concept?
+	I will use JUnit Testing to test both putting a coin in a column whether that column is full or not full and I will test if making a certain move that should make a player win causes that player to win.
+
+
+- Why does it make sense to implement this feature with this concept? Justify
+  why this is a non-trivial application of the concept in question.
+	It makes sense to test these areas because they could both contain edge cases that could cause bugs if they are not exhaustively tested. This is nontrivial because there are many corner cases to test that are central to the game’s playability. 
+
+
+====================
+=: Core Concept 4 :=
+====================
+
+Concept 4: File I/O
+
+- What specific feature of your game will be implemented using this concept?
+	I will use File I/O to save high scores. I will define high scores as the least number of moves it took a player to win. For example, if Jim beat Tom in 3 moves, then Tom beat Jim in 8 moves and those were the only two games ever played, the high scores would be displayed as follows:
+1. Jim beat Tom in 4 moves
+2. Tom beat Jim in 8 moves
+
+
+- Why does it make sense to implement this feature with this concept? Justify
+  why this is a non-trivial application of the concept in question.
+	This will be non-trivial because each entry into my txt file will contain 3 vital pieces of information, two strings and an integer that will need to be parsed and displayed correctly.
+
+
