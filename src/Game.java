@@ -137,7 +137,7 @@ public class Game implements Runnable {
         if (selectedOption == 0 && board.isAlpha(txt2.getText())) {
             name2 = txt2.getText();
         }
-        names.setText(name1 + " (Red) vs. " + name2 + " (Blue)");
+        names.setText(name1 + " (Pink) vs. " + name2 + " (Blue)");
         board.setPlayerNames(name1, name2);
 
     }
