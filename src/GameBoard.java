@@ -145,7 +145,7 @@ public class GameBoard extends JPanel {
                 if (val == 0)
                     g.setColor(Color.WHITE);
                 if (val == 1)
-                    g.setColor(Color.RED);
+                    g.setColor(Color.PINK);
                 if (val == 2)
                     g.setColor(Color.BLUE);
                 g.fillOval(10 + (col * 100), 160 + (row * 100), 80, 80);
@@ -154,7 +154,7 @@ public class GameBoard extends JPanel {
 
         // Drawing Selection Indicators
         if (currentPlayer == 1)
-            g.setColor(Color.RED);
+            g.setColor(Color.PINK);
         if (currentPlayer == 2)
             g.setColor(Color.BLUE);
         g.fillOval(10 + (currentSelection * 100), 10, 80, 80);
